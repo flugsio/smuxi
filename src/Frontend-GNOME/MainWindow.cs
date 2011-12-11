@@ -67,7 +67,9 @@ namespace Smuxi.Frontend.Gnome
         private bool             _IsMinimized;
         private bool             _IsMaximized;
         private bool             _IsFullscreen;
-        
+
+        Gtk.HBox MenuHBox { get; set; }
+
         public bool ShowMenuBar {
             get {
                 return _MenuBar.Visible;
@@ -488,9 +490,20 @@ namespace Smuxi.Frontend.Gnome
             
             _ProgressBar = new Gtk.ProgressBar();
             _ProgressBar.BarStyle = Gtk.ProgressBarStyle.Continuous;
+            var chatJoinHBox = new Gtk.HBox();
+            var cb = new Gtk.ComboBox(new string[] {"GIMPnet"});
+            cb.Active = 0;
+            chatJoinHBox.PackStart(new Gtk.Entry(), false, false, 5);
+            chatJoinHBox.PackStart(new Gtk.Label("@"), false, false, 5);
+            chatJoinHBox.PackStart(cb);
+            chatJoinHBox.PackStart(new Gtk.Button("Join Chat"), false, false, 5);
+
+            MenuHBox = new Gtk.HBox();
+            MenuHBox.PackStart(_MenuBar, false, false, 0);
+            MenuHBox.PackEnd(chatJoinHBox, false, false, 0);
 
             Gtk.VBox vbox = new Gtk.VBox();
-            vbox.PackStart(_MenuBar, false, false, 0);
+            vbox.PackStart(MenuHBox, false, false, 0);
             vbox.PackStart(_Notebook, true, true, 0);
             vbox.PackStart(_Entry, false, false, 0);
 
@@ -852,7 +865,7 @@ namespace Smuxi.Frontend.Gnome
                 }
             });
         }
-        
+
         protected virtual void OnChatClearAllActivityButtonClicked(object sender, EventArgs e)
         {
             Trace.Call(sender, e);
