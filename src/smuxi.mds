@@ -41,6 +41,9 @@
       <Entry build="True" name="Db4objects.Db4o-2008" configuration="Release" />
       <Entry build="True" name="2005-jabber-net" configuration="Release" />
       <Entry build="True" name="netlib.Dns" configuration="Release" />
+      <Entry build="True" name="ServiceStack.Text" configuration="Release" />
+      <Entry build="True" name="ServiceStack.Text.Tests" configuration="Release" />
+      <Entry build="True" name="LibGit2Sharp" configuration="Release" />
     </Configuration>
     <Configuration name="Debug" ctype="CombineConfiguration">
       <Entry build="True" name="Common" configuration="Debug" />
@@ -71,6 +74,9 @@
       <Entry build="True" name="Db4objects.Db4o-2008" configuration="Debug" />
       <Entry build="True" name="2005-jabber-net" configuration="Debug" />
       <Entry build="True" name="netlib.Dns" configuration="Debug" />
+      <Entry build="True" name="ServiceStack.Text" configuration="Debug" />
+      <Entry build="True" name="ServiceStack.Text.Tests" configuration="Debug" />
+      <Entry build="True" name="LibGit2Sharp" configuration="Debug" />
     </Configuration>
     <Configuration name="Debug-Win32" ctype="CombineConfiguration">
       <Entry build="True" name="Common" configuration="Debug" />
@@ -101,6 +107,9 @@
       <Entry build="True" name="Db4objects.Db4o-2008" configuration="Debug" />
       <Entry build="True" name="2005-jabber-net" configuration="Debug" />
       <Entry build="True" name="netlib.Dns" configuration="Debug" />
+      <Entry build="True" name="ServiceStack.Text" configuration="Debug" />
+      <Entry build="True" name="ServiceStack.Text.Tests" configuration="Debug" />
+      <Entry build="True" name="LibGit2Sharp" configuration="Debug" />
     </Configuration>
   </Configurations>
   <StartMode startupentry="Server" single="False">
@@ -132,6 +141,9 @@
     <Execute type="None" entry="Db4objects.Db4o-2008" />
     <Execute type="None" entry="2005-jabber-net" />
     <Execute type="None" entry="netlib.Dns" />
+    <Execute type="None" entry="ServiceStack.Text" />
+    <Execute type="None" entry="ServiceStack.Text.Tests" />
+    <Execute type="None" entry="LibGit2Sharp" />
   </StartMode>
   <Entries>
     <Entry filename="Common/Common.mdp" />
@@ -162,5 +174,8 @@
     <Entry filename="../lib/db4o-net/Db4objects.Db4o/Db4objects.Db4o-2008.csproj" />
     <Entry filename="../lib/jabber-net/2005-jabber-net.csproj" />
     <Entry filename="../lib/jabber-net/netlib.Dns/netlib.Dns.csproj" />
+    <Entry filename="../lib/ServiceStack.Text/src/ServiceStack.Text/ServiceStack.Text.csproj" />
+    <Entry filename="../lib/ServiceStack.Text/tests/ServiceStack.Text.Tests/ServiceStack.Text.Tests.csproj" />
+    <Entry filename="../lib/libgit2sharp/LibGit2Sharp/LibGit2Sharp.csproj" />
   </Entries>
 </Combine>
