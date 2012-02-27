@@ -82,6 +82,7 @@
     <File subtype="Code" buildaction="Compile" name="MessageBuffers/GitMessageBuffer.cs" />
     <File subtype="Directory" buildaction="Compile" name="Messages/Dto" />
     <File subtype="Code" buildaction="Compile" name="Messages/Dto/MessageDtoModelV1.cs" />
+    <File subtype="Code" buildaction="Compile" name="MessageBuffers/JsonMessageBuffer.cs" />
   </Contents>
   <References>
     <ProjectReference type="Assembly" localcopy="True" refto="../../lib/log4net.dll" />
